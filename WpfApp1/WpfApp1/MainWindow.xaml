@@ -7,12 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="109" Margin="45,82,0,0" Stroke="Black" VerticalAlignment="Top" Width="383"/>
+        <Label x:Name="lbCheckBox" Content="Uso de control de CheckBox" HorizontalAlignment="Left" Margin="248,143,0,0" VerticalAlignment="Top" Width="163" BorderBrush="Black" BorderThickness="1,1,1,1" HorizontalContentAlignment="Center"/>
+
         <Label Content="Control Checkbox" HorizontalAlignment="Left" Margin="55,47,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="55,110,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="55,138,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="55,166,0,0" VerticalAlignment="Top"/>
-        <Button Content="Aplicar" HorizontalAlignment="Left" Margin="310,118,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="260,156,0,0" VerticalAlignment="Top" Width="141"/>
+        <CheckBox x:Name="cbTipoLetra" Content="Tipo de letra" HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbColorTexto" Content="Cambiar color de texto" HorizontalAlignment="Left" Margin="55,128,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbColorFondo" Content="Cambiar color de fondo" HorizontalAlignment="Left" Margin="55,156,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAplicar" Content="Aplicar" HorizontalAlignment="Left" Margin="309,102,0,0" VerticalAlignment="Top" Click="btnAplicar_Click"/>
 
     </Grid>
 </Window>

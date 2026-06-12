@@ -20,5 +20,24 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void btnAplicar_Click(object sender, RoutedEventArgs e)
+        {
+            lbCheckBox.FontFamily = new FontFamily("Segoe UI");
+            lbCheckBox.Foreground = Brushes.Black;
+            lbCheckBox.Background = Brushes.Transparent;
+
+            if (cbTipoLetra.IsChecked == true) {
+                lbCheckBox.FontFamily = new FontFamily("Calibri");
+            }
+            if (cbColorTexto.IsChecked == true) {
+
+                lbCheckBox.Foreground = Brushes.Red;
+            }
+            if (cbColorFondo.IsChecked == true) { 
+            
+                lbCheckBox.Background = Brushes.YellowGreen;
+            }
+        }
     }
 }
