@@ -39,5 +39,27 @@ namespace WpfApp1
                 lbCheckBox.Background = Brushes.YellowGreen;
             }
         }
+
+        private void btnApliRadio_Click(object sender, RoutedEventArgs e)
+        {
+            lbCheckB_Radio.FontFamily = new FontFamily("Segoe UI");
+            lbCheckB_Radio.Foreground = Brushes.Black;
+            lbCheckB_Radio.Background = Brushes.Transparent;
+
+            if (rbTipoLetra.IsChecked == true)
+            {
+                lbCheckB_Radio.FontFamily = new FontFamily("Calibri");
+            }
+            else if (rbColorTexto.IsChecked == true)
+            {
+
+                lbCheckB_Radio.Foreground = Brushes.Brown;
+            }
+            else    if (rbColorFondo.IsChecked == true)
+            {
+
+                lbCheckB_Radio.Background = Brushes.Aqua;
+            }
+        }
     }
 }
