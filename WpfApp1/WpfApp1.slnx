@@ -1,4 +1,7 @@
 <Solution>
   <Project Path="Ejercicio_Propuesto/Ejercicio_Propuesto.csproj" Id="474081dc-f804-4d03-83e7-eea69bf5ba4c" />
+  <Project Path="Estructuras_de_repeticion/Estructuras_de_repeticion.csproj" Id="885fb378-0b83-4f2e-b7c2-cb758164ba08" />
+  <Project Path="Registro_clientes2/Registro_impresiones.csproj" Id="eb8a9923-0d41-48b8-b13d-3ce8230e4799" />
+  <Project Path="Registro_de_clientes/Registro_de_clientes.csproj" Id="b27b87ca-75fb-4ca8-b36f-8080a80dec1d" />
   <Project Path="WpfApp1/WpfApp1.csproj" />
 </Solution>

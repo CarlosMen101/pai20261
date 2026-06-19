@@ -1,0 +1,30 @@
+﻿<Window x:Class="Estructuras_de_repeticion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Estructuras_de_repeticion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="
+                           *"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button x:Name="btnCombo" Content="ComboBox" Height="215" Click="btnCombo_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Button x:Name="btnListBox" Content="ListBox" Height="219" Click="btnListBox_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button x:Name="ListView" Content="Listview" Height="213" Click="ListView_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

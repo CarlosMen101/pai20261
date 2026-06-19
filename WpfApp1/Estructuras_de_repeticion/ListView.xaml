@@ -1,0 +1,29 @@
+﻿<Window x:Class="Estructuras_de_repeticion.ListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Estructuras_de_repeticion"
+        mc:Ignorable="d"
+        Title="ListView" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="lvAlumnos" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,142,577,141">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nombre" DisplayMemberBinding="{Binding Nombre}"/>
+                    <GridViewColumn Header="Apellidos" DisplayMemberBinding="{Binding Apellidos}"/>
+                    <GridViewColumn Header="edad" DisplayMemberBinding="{Binding Nombre}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="52,76,0,0" VerticalAlignment="Top" Click="btnAgregar_Click"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Margin="145,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Margin="360,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEdad" HorizontalAlignment="Left" Margin="631,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nombres" HorizontalAlignment="Left" Margin="46,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="296,24,0,0" VerticalAlignment="Top"/>
+        <Label Content="Edad" HorizontalAlignment="Left" Margin="552,32,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSeleccionado" Content="Item Seleccionado" HorizontalAlignment="Left" Margin="182,76,0,0" VerticalAlignment="Top" Click="btnSeleccionado_Click"/>
+
+    </Grid>
+</Window>

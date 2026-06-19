@@ -1,0 +1,46 @@
+﻿<Window x:Class="Estructuras_de_repeticion.VentanaComboBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ComboBox" Height="450" Width="800">
+
+    <Grid>
+
+        <ComboBox x:Name="cmbFrutas"
+                  HorizontalAlignment="Left"
+                  Margin="45,34,0,0"
+                  VerticalAlignment="Top"
+                  Width="191">
+
+            <ComboBoxItem Content="Piña"/>
+            <ComboBoxItem Content="Mandarina"/>
+
+        </ComboBox>
+
+        <Button x:Name="btnMarcar"
+                Content="Marcar"
+                Width="132"
+                HorizontalAlignment="Left"
+                Margin="74,89,0,0"
+                VerticalAlignment="Top"
+                Click="btnMarcar_Click"/>
+        <Label Content="Fruta"
+               HorizontalAlignment="Left"
+               Margin="427,45,0,0"
+               VerticalAlignment="Top"/>
+
+        <TextBox x:Name="tbxFruta"
+                 Width="120"
+                 HorizontalAlignment="Left"
+                 Margin="532,53,0,0"
+                 VerticalAlignment="Top"/>
+
+        <Button x:Name="btnAgregar"
+                Content="Agregar"
+                HorizontalAlignment="Left"
+                Margin="721,52,0,0"
+                VerticalAlignment="Top"
+                Click="btnAgregar_Click"/>
+
+    </Grid>
+
+</Window>

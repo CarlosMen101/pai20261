@@ -1,0 +1,19 @@
+﻿<Window x:Class="Estructuras_de_repeticion.ListBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Estructuras_de_repeticion"
+        mc:Ignorable="d"
+        Title="ListBox" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lbxFrutas" SelectionChanged="ListBox_SelectionChanged" Margin="10,0,656,319">
+            <ComboBoxItem Content="Piña"/>
+        </ListBox>
+        <Button x:Name="btnMostrar" Content="Mostrar" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Width="134" Click="btnMostrar_Click"/>
+        <Label x:Name="___Sin_nombre_" Content="Nueva Fruta" HorizontalAlignment="Left" Margin="23,166,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="tbxAgregarFru" HorizontalAlignment="Left" Margin="17,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="53,251,0,0" VerticalAlignment="Top" Click="btnAgregar_Click"/>
+
+    </Grid>
+</Window>
