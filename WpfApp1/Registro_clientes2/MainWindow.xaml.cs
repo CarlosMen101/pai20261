@@ -20,5 +20,10 @@ namespace Registro_clientes2
         {
             InitializeComponent();
         }
+
+        private void btnEstadistica_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

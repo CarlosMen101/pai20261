@@ -1,0 +1,39 @@
+﻿<Window x:Class="EmpresaManofactura.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmpresaManofactura"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Calcular sueldos" HorizontalAlignment="Left" Margin="267,0,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
+        <Button x:Name="btnCalcular" Grid.Column="1" Content="Calcular" HorizontalAlignment="Center" Margin="0,123,0,0" VerticalAlignment="Top" FontSize="36" Click="btnCalcular_Click"/>
+        <TextBox x:Name="tbxResultado" Grid.Column="1" HorizontalAlignment="Left" Margin="227,161,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBox x:Name="tbxInacistencias" HorizontalAlignment="Left" Margin="208,139,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Inacistencias:" HorizontalAlignment="Left" Margin="35,131,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="tbxMontoHoras" Grid.Column="1" HorizontalAlignment="Left" Margin="227,42,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Label Grid.Column="1" Content="Monto por horas extras" HorizontalAlignment="Left" Margin="26,38,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tbxHorasExt" HorizontalAlignment="Left" Margin="208,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="N° de horas extra:" HorizontalAlignment="Left" Margin="35,143,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="tbxTarifa" HorizontalAlignment="Left" Margin="208,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Tarifa por hora:" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" FontSize="20" Grid.Row="1"/>
+        <Label Grid.Column="1" Content="Sueldo base" HorizontalAlignment="Left" Margin="26,215,0,0" VerticalAlignment="Top" FontSize="18" Grid.RowSpan="2"/>
+        <Label Grid.Column="1" Content="Bonificacion:" HorizontalAlignment="Left" Margin="26,76,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <Label Grid.Column="1" Content="Sueldo neto" HorizontalAlignment="Left" Margin="30,158,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tbxBonificacion" Grid.Column="1" HorizontalAlignment="Left" Margin="227,85,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <TextBox x:Name="tbxSueldoBase" Grid.Column="1" HorizontalAlignment="Left" Margin="227,3,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Label Grid.Column="1" Content="Descuento:" HorizontalAlignment="Left" Margin="30,117,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tbxDescuento_" Grid.Column="1" HorizontalAlignment="Left" Margin="885,526,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <TextBox x:Name="tbxDescuento" Grid.Column="1" HorizontalAlignment="Left" Margin="227,123,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿<Window x:Class="ComboBox_ListBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComboBox_ListBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Cambio de divisas" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <ComboBox x:Name="cbxDivisas" HorizontalAlignment="Left" Margin="224,165,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxDivisas_SelectionChanged">
+            <ComboBoxItem Content="Dolar"/>
+            <ComboBoxItem Content="Euro"/>
+            <ComboBoxItem Content="peso chileno"/>
+        </ComboBox>
+        <Label Content="Soles:" HorizontalAlignment="Left" Margin="39,65,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tbxSoles" HorizontalAlignment="Left" Margin="142,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Label Content="Resultado" HorizontalAlignment="Left" Margin="18,51,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="tbxResultado" HorizontalAlignment="Left" Margin="142,59,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <ListBox Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="125,42,125,41"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="4Notas/4Notas.csproj" />
+  <Project Path="ComboBox_ListBox/ComboBox_ListBox.csproj" />
+  <Project Path="EmpresaManofactura/EmpresaManofactura.csproj" />
+  <Project Path="Practica pal examen/Practica pal examen.csproj" />
+  <Project Path="radiobuttonycheckbox/radiobuttonycheckbox.csproj" />
+</Solution>
