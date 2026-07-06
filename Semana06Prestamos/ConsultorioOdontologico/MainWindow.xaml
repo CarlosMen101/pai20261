@@ -1,0 +1,40 @@
+﻿<Window x:Class="ConsultorioOdontologico.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConsultorioOdontologico"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Paciente" HorizontalAlignment="Left" Margin="72,47,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tratamiento" HorizontalAlignment="Left" Margin="72,0,0,0" VerticalAlignment="Center"/>
+        <Label Content="Pieza Dental" HorizontalAlignment="Left" Margin="72,150,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha:" HorizontalAlignment="Left" Margin="27,25,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="22"/>
+        <Calendar x:Name="dp_Fecha" Grid.Column="1" HorizontalAlignment="Left" Margin="174,0,0,0" VerticalAlignment="Center"/>
+        <Button x:Name="btn_Agendar" Content="Agendar" HorizontalAlignment="Left" Margin="180,200,0,0" VerticalAlignment="Top" FontSize="22" Grid.RowSpan="2" Click="Button_Click"/>
+        <TextBox x:Name="tbx_Resultado" HorizontalAlignment="Left" Margin="161,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="478" Grid.ColumnSpan="2" Height="80" FontSize="20" IsEnabled="False"/>
+        <TextBox x:Name="tbx_Cliente" HorizontalAlignment="Left" Margin="147,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbx_Tratamiento" HorizontalAlignment="Left" Margin="161,0,0,0" VerticalAlignment="Center" Width="120">
+            <ComboBoxItem Content="Limpieza dental"/>
+            <ComboBoxItem Content="curacion caries"/>
+            <ComboBoxItem Content="brakects"/>
+        </ComboBox>
+        <ComboBox x:Name="cbx_Diente" HorizontalAlignment="Left" Margin="175,152,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Insicivos"/>
+            <ComboBoxItem Content="caninos"/>
+            <ComboBoxItem Content="Premolares"/>
+            <ComboBoxItem Content="Molares"/>
+        </ComboBox>
+        <Button x:Name="btn_Nuevo" Grid.Column="1" Content="Nuevo" HorizontalAlignment="Left" Margin="171,200,0,0" VerticalAlignment="Top" FontSize="22" Grid.RowSpan="2" Click="btn_Nuevo_Click"/>
+
+    </Grid>
+</Window>
