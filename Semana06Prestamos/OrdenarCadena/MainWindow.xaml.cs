@@ -20,10 +20,5 @@ namespace OrdenarCadena
         {
             InitializeComponent();
         }
-
-        private void btnListar_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }
