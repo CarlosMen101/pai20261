@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace CadenasTexto
+namespace OrdenarCadena
 {
     /// <summary>
     /// Interaction logic for App.xaml

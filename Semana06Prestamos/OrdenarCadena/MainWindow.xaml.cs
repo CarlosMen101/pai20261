@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CadenasTexto
+namespace OrdenarCadena
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -19,6 +19,11 @@ namespace CadenasTexto
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnListar_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
