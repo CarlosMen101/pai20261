@@ -16,9 +16,58 @@ namespace AdivinaEdad
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int edadMinima;
+        private int edadMaxima;
+        private int edadAdPropuesta;
+        private int contadorIntentos;
+
+        private Random random = new Random();   
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnPrimerIntento_Click(object sender, RoutedEventArgs e)
+        {
+            if (!int.TryParse(tbxLimiteInf.Text, out edadMinima))
+            {
+                MessageBox.Show("Ingrese una edad minima valida ", "Validacion!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (!int.TryParse(tbxLimiteSup.Text, out edadMaxima))
+            {
+                MessageBox.Show("Ingrese una edad maxima valida ", "Validacion!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (edadMinima >= edadMaxima) 
+            {
+                MessageBox.Show("Ingrese un rando de edades validas, edad maxima mayor que edad minima");
+                return;
+            }
+
+            edadAdPropuesta =random.Next(edadMinima, edadMaxima+1);
+
+            contadorIntentos++;
+
+            tbxResultado.Text =edadAdPropuesta.ToString();
+        }
+
+        private void btnIncorrecto_Click(object sender, RoutedEventArgs e)
+        {
+            if (contadorIntentos == 0) { 
+                MessageBox.Show("Debe realizar el primer intento antes de continuar", "Validacion!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            edadAdPropuesta=random.Next(edadMinima, edadMaxima + 1);
+            contadorIntentos++;
+            tbxResultado.Text = edadAdPropuesta.ToString();
+
+        }
+
+        private void BtnCorrecto_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Felicidades, adivinaste la edad en {contadorIntentos} intentos", "Resultado", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

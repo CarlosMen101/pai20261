@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdivinaEdad"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Adivinar Edad" Height="450" Width="800">
+    <Grid Margin="0,30,0,30">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -16,7 +16,7 @@
             <RowDefinition Height="197*"/>
         </Grid.RowDefinitions>
         <Label Content="INDICALE al computador un intervalo de edades" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="26" Width="266" />
-        <Grid Margin="0,60,0,0" Grid.RowSpan="2">
+        <Grid Margin="0,60,0,10" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="120"/>
@@ -25,11 +25,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBox x:Name="tbxLimiteInf" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-            <TextBox x:Name="txbLimiteSup" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="tbxLimiteSup" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </Grid>
-        <Button x:Name="btnIntento" Content="Primer Intento" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Padding="15,5,15,5" Height="27" Width="108"/>
+        <Button x:Name="btnPrimerIntento" Content="Primer Intento" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Padding="15,5,15,5" Height="27" Width="108" Click="btnPrimerIntento_Click" Margin="0,20,0,20"/>
         <Label Content="La computadora piensa que tu edad es:" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Height="37" Width="358"/>
-        <TextBox x:Name="txbResultado" HorizontalAlignment="Left" Margin="329,31,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxResultado" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" FontSize="20"/>
         <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -38,8 +38,8 @@
                 <ColumnDefinition Width="180*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnIncorrecto" Grid.Column="1" Content="Incorrecto" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-            <Button x:Name="BtnCorrecto" Grid.Column="3" Content="Correcto" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            <Button x:Name="btnIncorrecto" Grid.Column="1" Content="Incorrecto" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Click="btnIncorrecto_Click"/>
+            <Button x:Name="BtnCorrecto" Grid.Column="3" Content="Correcto" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Click="BtnCorrecto_Click"/>
         </Grid>
 
     </Grid>
