@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="136" Margin="10,10,0,0" VerticalAlignment="Top" Width="434" Source="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Google_2026_logo.svg/500px-Google_2026_logo.svg.png"/>
+        <Image HorizontalAlignment="Left" Height="97" Margin="10,10,0,0" VerticalAlignment="Top" Width="362" Source="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Google_2026_logo.svg/500px-Google_2026_logo.svg.png"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="601,142,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image Margin="249,217,51,65" Source="/Google_2026_logo.svg.png" Stretch="Fill"/>
+        <Image Margin="10,142,415,183" Source="/Google_2026_logo.svg.png" Stretch="Fill"/>
 
     </Grid>
 </Window>

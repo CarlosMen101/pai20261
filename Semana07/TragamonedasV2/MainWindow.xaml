@@ -1,0 +1,76 @@
+﻿<Window x:Class="TragamonedasV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TragamonedasV2"
+        mc:Ignorable="d"
+        Title="Tragamonedas_v2" Height="600" Width="1000" Background="#F5F5F7">
+
+    <!-- Grid Principal -->
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <!-- Fila superior para el Temporizador -->
+            <RowDefinition Height="Auto"/>
+            <!-- Fila central para el área de juego (Imágenes y Puntaje) -->
+            <RowDefinition Height="*"/>
+            <!-- Fila inferior para el Botón -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 1. TEMPORIZADOR (Fila Superior) -->
+        <Border Grid.Row="0" Background="#E53935" CornerRadius="8" Padding="10" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tiempo Restante: " FontSize="20" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                <TextBlock x:Name="txtTemporizador" Text="00:30" FontSize="24" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <!-- 2. ÁREA DE JUEGO (Fila Central) -->
+        <Grid Grid.Row="1" Margin="0,10,0,20">
+            <Grid.ColumnDefinitions>
+                <!-- Lado Izquierdo: Espacio para las 3 imágenes (ocupa más espacio) -->
+                <ColumnDefinition Width="3*"/>
+                <!-- Lado Derecho: Puntaje -->
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Izquierda: Contenedor para las 3 imágenes -->
+            <UniformGrid Grid.Column="0" Columns="3" Margin="10">
+                <!-- Imagen 1 -->
+                <Border BorderBrush="#CCCCCC" BorderThickness="3" CornerRadius="10" Background="White" Margin="10">
+                    <Image x:Name="imgTraga1" Stretch="Uniform" Margin="10"/>
+                </Border>
+                <!-- Imagen 2 -->
+                <Border BorderBrush="#CCCCCC" BorderThickness="3" CornerRadius="10" Background="White" Margin="10">
+                    <Image x:Name="imgTraga2" Stretch="Uniform" Margin="10"/>
+                </Border>
+                <!-- Imagen 3 -->
+                <Border BorderBrush="#CCCCCC" BorderThickness="3" CornerRadius="10" Background="White" Margin="10">
+                    <Image x:Name="imgTraga3" Stretch="Uniform" Margin="10"/>
+                </Border>
+            </UniformGrid>
+
+            <!-- Derecha: Panel de Puntaje -->
+            <Border Grid.Column="1" Background="#FFFFFF" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="10" Margin="10" Padding="15">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="PUNTAJE" FontSize="18" FontWeight="Bold" Foreground="#666666" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="txtPuntaje" Text="0000" FontSize="36" FontWeight="Black" Foreground="#2E7D32" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- 3. BOTÓN INICIAR JUEGO (Fila Inferior) -->
+        <Button x:Name="btnIniciar" Grid.Row="2" Content="INICIAR JUEGO" 
+                Width="250" Height="60" FontSize="20" FontWeight="Bold" 
+                Background="#1E88E5" Foreground="White" Cursor="Hand"
+                Click="btnIniciar_Click">
+            <!-- Estilo simple para que el botón se vea moderno y tenga bordes redondeados -->
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
