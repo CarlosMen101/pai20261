@@ -1,0 +1,52 @@
+﻿<Window x:Class="MenuContextuales.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:MenuContextuales"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Hacer click Derecho" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Menu item 1"/>
+                    <MenuItem Header="Menu item 2"/>
+                    <Separator/>
+                    <MenuItem Header="Menu item 3"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <TextBox HorizontalAlignment="Left" Margin="209,288,0,0" TextWrapping="Wrap" Text="Click Derecho para desplegar el menu contextutal" VerticalAlignment="Top" Width="308">
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <!-- Opción Cortar -->
+                    <MenuItem Header="Cortar" Command="Cut">
+                        <MenuItem.Icon>
+                            <Image Source="/iconos/icons8-cut-48.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <!-- Opción Copiar -->
+                    <MenuItem Header="Copiar" Command="Copy">
+                        <MenuItem.Icon>
+                            <!--Material Desing-->
+                            <materialDesign:PackIcon Kind="ContentCopy" Width="15" Height="15">
+                            </materialDesign:PackIcon>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <!-- Opción Pegar -->
+                    <MenuItem Header="Pegar" Command="Paste">
+                        <MenuItem.Icon>
+                            <Image Source="/iconos/icons8-copy-50.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+    </Grid>
+</Window>
