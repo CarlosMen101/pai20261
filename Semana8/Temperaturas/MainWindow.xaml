@@ -6,16 +6,10 @@
     <Grid Margin="15">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2.2*"/>
-            <!-- Columna Izquierda (Meses) -->
             <ColumnDefinition Width="1.5*"/>
-            <!-- Columna Central (Botones) -->
             <ColumnDefinition Width="1*"/>
-            <!-- Columna Derecha (Lista) -->
         </Grid.ColumnDefinitions>
 
-        <!-- ========================================== -->
-        <!-- COLUMNA 1: PANEL AMARILLO (MESES)          -->
-        <!-- ========================================== -->
         <Border Grid.Column="0" Background="#FFE6E047" BorderBrush="Black" BorderThickness="1" Margin="5">
             <StackPanel Margin="15">
                 <TextBlock Text="Temperaturas Promedio Mensuales" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" Margin="0,0,0,15"/>
@@ -26,7 +20,7 @@
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
 
-                    <!-- Mitad Izquierda (Enero - Junio) -->
+
                     <StackPanel Grid.Column="0" Margin="0,0,10,0">
                         <StackPanel Orientation="Horizontal" Margin="0,5">
                             <TextBlock Text="Enero" Width="60" VerticalAlignment="Center"/>
@@ -54,7 +48,6 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <!-- Mitad Derecha (Julio - Diciembre) -->
                     <StackPanel Grid.Column="1" Margin="10,0,0,0">
                         <StackPanel Orientation="Horizontal" Margin="0,5">
                             <TextBlock Text="Julio" Width="60" VerticalAlignment="Center"/>
@@ -85,9 +78,6 @@
             </StackPanel>
         </Border>
 
-        <!-- ========================================== -->
-        <!-- COLUMNA 2: BOTONES Y CÁLCULOS             -->
-        <!-- ========================================== -->
         <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="15,20,15,0">
             <Button x:Name="btnMostrarCalculos" Content="Mostrar Calculos" Height="30" Margin="0,0,0,20"/>
 
@@ -100,9 +90,6 @@
             <Button x:Name="btnGuardarRegistro" Content="Guardar Registros" Height="30"/>
         </StackPanel>
 
-        <!-- ========================================== -->
-        <!-- COLUMNA 3: PANEL VERDE (LISTBOX)           -->
-        <!-- ========================================== -->
         <ListBox x:Name="lstMesesMayores" Grid.Column="2" Background="#FF7DCD85" Margin="5" Padding="5"/>
 
     </Grid>
