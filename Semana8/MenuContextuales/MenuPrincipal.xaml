@@ -38,7 +38,7 @@
                     </Button>
                     <Button Command="Copy">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/iconos/icons8-copy-50.png" Width="18" />
+                            <Image Source="/iconos/icons8-copy-50.png" Width="19" />
                             <Label Content="Copiar"/>
                         </StackPanel>
                     </Button>
