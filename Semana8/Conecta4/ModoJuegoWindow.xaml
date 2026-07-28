@@ -1,0 +1,41 @@
+﻿<Window x:Class="Conecta4App.ModoJuegoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Seleccionar Modo" Height="320" Width="450"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#1E272C">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Título principal -->
+        <TextBlock x:Name="lblTitulo" Text="🎯 4 en Raya" Foreground="White" 
+                   FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+        <!-- Panel de Selección de Modos -->
+        <StackPanel x:Name="panelBotonesModo" Grid.Row="1" VerticalAlignment="Center">
+            <Button x:Name="btnHumanoVsHumano" Content="👤 vs 👤  Jugador vs Jugador" 
+                    Height="45" Margin="0,0,0,10" Background="#27AE60" Foreground="White" 
+                    FontSize="15" FontWeight="Bold" Cursor="Hand" Click="btnHumanoVsHumano_Click"/>
+
+            <Button x:Name="btnHumanoVsPC" Content="👤 vs 💻  Jugador vs Computadora" 
+                    Height="45" Background="#8E44AD" Foreground="White" 
+                    FontSize="15" FontWeight="Bold" Cursor="Hand" Click="btnHumanoVsPC_Click"/>
+        </StackPanel>
+
+        <!-- Panel Simulación de Sorteo de Turno Inicial -->
+        <StackPanel x:Name="panelSorteo" Grid.Row="1" VerticalAlignment="Center" Visibility="Collapsed">
+            <TextBlock Text="🎲 Sorteando quién inicia la partida..." Foreground="#ECF0F1" 
+                       FontSize="16" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+            <TextBlock x:Name="lblResultadoSorteo" Text="Mezclando..." Foreground="#F1C40F" 
+                       FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Pie de página informativo -->
+        <TextBlock Grid.Row="2" Text="Selecciona una opción para comenzar" Foreground="#7F8C8D" 
+                   HorizontalAlignment="Center" FontSize="12"/>
+    </Grid>
+</Window>
