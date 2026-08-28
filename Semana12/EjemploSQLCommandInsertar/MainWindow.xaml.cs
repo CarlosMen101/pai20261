@@ -1,22 +1,10 @@
 ﻿using Microsoft.Data.SqlClient;
-using System.Data;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System;
 using System.Configuration;
+using System.Windows;
 
-namespace EjemploSQLCommandinsertar
+namespace EjemploSQLCommandInsertar
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -26,43 +14,26 @@ namespace EjemploSQLCommandinsertar
 
         private void btnRegistrar_Click(object sender, RoutedEventArgs e)
         {
-            // Obtiene la cadena de conexión desde el archivo de configuración (App.config)
-            string cn = ConfigurationManager.ConnectionStrings["EjemploSQLCommandInsertar.Properties.Settings.cn"].ConnectionString;
+            string cn = ConfigurationManager.ConnectionStrings["EjemploSQLCommandInsertar.Properties.Settings.Northwind"].ConnectionString;
 
-            using (SqlConnection conex = new SqlConnection(cn))
+            try
             {
-                try
+                using (SqlConnection conex = new SqlConnection(cn))
                 {
-                    string query = "INSERT INTO CUSTOMERS(CustomerID, CompanyName) VALUES(@Id, @Nombre)";
-                    SqlCommand cmd = new SqlCommand(query, conex);
-                    //cmd.CommandType = CommandType.Text;
-
-                    cmd.Parameters.Add("@Id", SqlDbType.NChar, 5).Value = txtId.Text;
-                    cmd.Parameters.Add("@Nombre", SqlDbType.NVarChar, 40).Value = txtNombre.Text;
+                    SqlCommand cmd = conex.CreateCommand();
+                    cmd.CommandText = "INSERT INTO Customers(CustomerID, CompanyName) VALUES(@Id, @Nombre);";
+                    cmd.Parameters.Add("@Id", System.Data.SqlDbType.NChar, 5).Value = txtId.Text;
+                    cmd.Parameters.Add("@Nombre", System.Data.SqlDbType.NVarChar, 40).Value = txtNombre.Text;
 
                     conex.Open();
+                    cmd.ExecuteNonQuery();
 
-                    int filasAfectadas = cmd.ExecuteNonQuery();
-
-                    if (filasAfectadas > 0)
-                    {
-                        MessageBox.Show("Cliente agregado");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo registrar");
-                    }
+                    MessageBox.Show("Cliente registrado exitosamente.");
                 }
-                catch (SqlException ex)
-                {
-                    // Captura errores específicos de SQL Server (ej. ID duplicado)
-                    MessageBox.Show($"Error al insertar codigo: {ex.Number}, Descripcion: {ex.Message}");
-                }
-                catch (Exception ex)
-                {
-                    // Captura cualquier otro error general
-                    MessageBox.Show($"Error inesperado, Descripcion: {ex.Message}");
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al agregar cliente: {ex.Message}");
             }
         }
     }

@@ -6,26 +6,47 @@
         xmlns:local="clr-namespace:EjemploSQLCommandInsertar"
         mc:Ignorable="d"
         Title="AgreegarProducto" Height="450" Width="800">
-    <Grid Margin="30">
-        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Nombre Producto:" Width="120"/>
-                <TextBox x:Name="txtNombre" Width="200"/>
-            </StackPanel>
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Precio:" Width="120"/>
-                <TextBox x:Name="txtPrecio" Width="200"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal"  Grid.Row="2" HorizontalAlignment="Center">
-                <Button x:Name="btnNuevo" Content="Nuevo" Width="100" Margin="0,0,10,0" Click="btnNuevo_Click"/>
-                <Button x:Name="btnRegistrar" Content="Agregar Producto" Width="100" Click="btnRegistrar_Click"/>
-            </StackPanel>
-        </Grid>
+<Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <!-- Campo Nombre -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Nombre Producto:" Width="120" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNombre" Width="200"/>
+        </StackPanel>
+
+        <!-- Campo Precio -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Precio:" Width="120" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtPrecio" Width="200"/>
+        </StackPanel>
+
+        <!-- Campo Categoría -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Categoría:" Width="120" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtCategoria" Width="200"/>
+        </StackPanel>
+
+        <!-- Botones de Acción -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="120,0,0,20">
+            <Button x:Name="btnNuevo" Content="Nuevo" Width="80" Margin="0,0,10,0" Click="btnNuevo_Click"/>
+            <Button x:Name="btnRegistrar" Content="Agregar Producto" Padding="10,3" Click="btnRegistrar_Click"/>
+        </StackPanel>
+
+        <!-- DataGrid para listar productos -->
+        <DataGrid Grid.Row="4" x:Name="dgProductos" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                <DataGridTextColumn Header="Nombre Producto" Binding="{Binding Nombre}" Width="*"/>
+                <DataGridTextColumn Header="Precio" Binding="{Binding Precio, StringFormat={}{0:C}}" Width="100"/>
+                <DataGridTextColumn Header="Categoría" Binding="{Binding Categoria}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
