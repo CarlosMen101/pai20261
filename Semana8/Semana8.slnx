@@ -1,6 +1,9 @@
 <Solution>
   <Project Path="Conecta4/Conecta4.csproj" Id="2dc9eba3-5643-4b66-b2bd-911e4f138156" />
+  <Project Path="DockPanel/DockPanel.csproj" Id="dddbb956-2490-4753-993f-b1a978429c17" />
   <Project Path="MenuContextuales/MenuContextuales.csproj" />
+  <Project Path="Proveedores/Proveedores.csproj" Id="f4b06ca7-2383-4dcc-b74e-3afd0705caa0" />
   <Project Path="Temperaturas/Temperaturas.csproj" Id="5fa7b5d2-0228-4e3b-84f6-70ea70f5f6e0" />
+  <Project Path="VentanaMDI/VentanaMDI.csproj" Id="9073d0f5-9cff-4582-9574-070dedd8d883" />
   <Project Path="Votos/Votos.csproj" Id="ca2e17ab-2c28-4c1a-aa43-846a1be880c8" />
 </Solution>
