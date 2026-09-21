@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ActualizacionRegistros.Properties {
+namespace EliminacionRegistros.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

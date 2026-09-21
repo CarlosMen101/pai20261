@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace ActualizacionRegistros
+namespace EliminacionRegistros
 {
     /// <summary>
     /// Interaction logic for App.xaml

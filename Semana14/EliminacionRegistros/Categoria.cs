@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ActualizacionRegistros
+namespace EliminacionRegistros
 {
     internal class Categoria
     {
